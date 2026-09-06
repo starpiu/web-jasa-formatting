@@ -208,7 +208,7 @@ const sampleData = {
                         </tr>
                     </tbody>
                 </table>
-                <div style="font-size: 0.72rem; color: #475569; margin-top: 4px; font-style: italic;">Sumber: Data Olahan Tim FormatIlmiah (2024)</div>
+                <div style="font-size: 0.72rem; color: #475569; margin-top: 4px; font-style: italic;">Sumber: Data Olahan Peneliti (2024)</div>
             </div>
         `
     }
