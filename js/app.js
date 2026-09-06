@@ -3,6 +3,12 @@
  * Modern, High Performance, Vanilla JavaScript ES6+
  */
 
+// KONFIGURASI UTAMA
+const CONFIG = {
+    // Ganti nomor di bawah ini dengan nomor WhatsApp Anda (format: 628xxxxxxxx)
+    WHATSAPP_NUMBER: '6281234567890'
+};
+
 document.addEventListener('DOMContentLoaded', () => {
     initNavbarScroll();
     initMobileDrawer();
@@ -441,7 +447,7 @@ window.handleFormSubmit = function(e) {
         `📌 *Catatan / Pedoman:* ${encodeURIComponent(notes)}%0A%0A` +
         `Mohon informasi estimasi pengerjaan dan langkah pengiriman file dokumen saya. Terima kasih!`;
 
-    const adminWhatsAppUrl = `https://wa.me/6281234567890?text=${waText}`;
+    const adminWhatsAppUrl = `https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=${waText}`;
 
     showToast('Membuka WhatsApp untuk mengirim rincian pesanan Anda...', 'success');
 
