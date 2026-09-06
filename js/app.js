@@ -6,7 +6,7 @@
 // KONFIGURASI UTAMA
 const CONFIG = {
     // Ganti nomor di bawah ini dengan nomor WhatsApp Anda (format: 628xxxxxxxx)
-    WHATSAPP_NUMBER: '6281234567890'
+    WHATSAPP_NUMBER: '6289508067768'
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -278,7 +278,7 @@ function renderSampleContent(key) {
     }
 }
 
-window.switchSample = function(key) {
+window.switchSample = function (key) {
     currentSampleKey = key;
     renderSampleContent(key);
 
@@ -296,7 +296,7 @@ let selectedCalcType = 'package';
 let selectedPackageCost = 45000;
 let selectedPackageName = 'Standard';
 
-window.handleCalcTypeChange = function() {
+window.handleCalcTypeChange = function () {
     const radios = document.getElementsByName('calcType');
     for (const r of radios) {
         if (r.checked) {
@@ -326,7 +326,7 @@ window.handleCalcTypeChange = function() {
     updateCalcTotal();
 };
 
-window.selectCalcPkg = function(name, cost) {
+window.selectCalcPkg = function (name, cost) {
     selectedPackageName = name;
     selectedPackageCost = cost;
 
@@ -342,7 +342,7 @@ window.selectCalcPkg = function(name, cost) {
     updateCalcTotal();
 };
 
-window.updateCalcTotal = function() {
+window.updateCalcTotal = function () {
     let total = selectedPackageCost;
     const checkboxes = document.querySelectorAll('.calc-addons-grid input[type="checkbox"]:checked');
 
@@ -360,7 +360,7 @@ function formatRupiah(number) {
     return 'Rp ' + number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }
 
-window.applyCalcToOrder = function() {
+window.applyCalcToOrder = function () {
     const pkgSelect = document.getElementById('packageSelect');
     const orderNotes = document.getElementById('orderNotes');
 
@@ -392,7 +392,7 @@ window.applyCalcToOrder = function() {
     showToast('Estimasi kalkulator berhasil diterapkan ke form pemesanan!', 'success');
 };
 
-window.selectPackage = function(packageName, price) {
+window.selectPackage = function (packageName, price) {
     const pkgSelect = document.getElementById('packageSelect');
     if (pkgSelect) {
         if (packageName === 'Basic') pkgSelect.value = 'Basic (Rp 35.000)';
@@ -406,7 +406,7 @@ window.selectPackage = function(packageName, price) {
     }
 };
 
-window.scrollToCalculator = function(e) {
+window.scrollToCalculator = function (e) {
     e.preventDefault();
     const calcSection = document.getElementById('kalkulator-section');
     if (calcSection) {
@@ -414,14 +414,14 @@ window.scrollToCalculator = function(e) {
     }
 };
 
-window.syncPackageSelection = function() {
+window.syncPackageSelection = function () {
     // Sync if needed
 };
 
 /* ==========================================================================
    4. Form Submission & Smart WhatsApp Generator
    ========================================================================== */
-window.handleFormSubmit = function(e) {
+window.handleFormSubmit = function (e) {
     e.preventDefault();
 
     const name = document.getElementById('clientName').value.trim();
@@ -500,7 +500,7 @@ function animateCounter(element, target, duration) {
 /* ==========================================================================
    6. FAQ Search & Accordion
    ========================================================================== */
-window.toggleFaq = function(btn) {
+window.toggleFaq = function (btn) {
     const item = btn.closest('.faq-item');
     const isActive = item.classList.contains('active');
 
@@ -512,7 +512,7 @@ window.toggleFaq = function(btn) {
     }
 };
 
-window.filterFaqs = function() {
+window.filterFaqs = function () {
     const query = document.getElementById('faqSearchInput').value.toLowerCase().trim();
     const items = document.querySelectorAll('.faq-item');
 
@@ -529,7 +529,7 @@ window.filterFaqs = function() {
 /* ==========================================================================
    7. Modals & Toast Notifications
    ========================================================================== */
-window.openModal = function(modalId, e) {
+window.openModal = function (modalId, e) {
     if (e) e.preventDefault();
     const modal = document.getElementById(modalId);
     if (modal) {
@@ -538,7 +538,7 @@ window.openModal = function(modalId, e) {
     }
 };
 
-window.closeModal = function(modalId) {
+window.closeModal = function (modalId) {
     const modal = document.getElementById(modalId);
     if (modal) {
         modal.classList.remove('open');
@@ -555,7 +555,7 @@ document.querySelectorAll('.modal').forEach(modal => {
     });
 });
 
-window.closeWaTooltip = function(e) {
+window.closeWaTooltip = function (e) {
     if (e) e.stopPropagation();
     const tooltip = document.getElementById('waTooltip');
     if (tooltip) {
